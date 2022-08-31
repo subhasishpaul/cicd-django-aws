@@ -1,0 +1,24 @@
+# # mysql-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  type: ExternalName
+  externalName: usermgmtdb.cim1pjqg7efn.ap-south-1.rds.amazonaws.com
+
+
+# # postgres-service.yaml 
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   labels:
+#     app: postgres-service
+#   name: postgres-service
+# spec:
+#   externalName: demordsmyqldbinstance.cim1pjqg7efn.ap-south-1.rds.amazonaws.com
+#   selector:
+#     app: postgres-service
+#   type: ExternalName
+# status:
+#   loadBalancer: {}
